@@ -17,13 +17,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.adobe.granite.archetypes</groupId>
+  <groupId>com.sinnerschrader.aem.react</groupId>
   <artifactId>aem-project-archetype</artifactId>
   <version>11-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
-  <name>AEM Multi-Module Archetype</name>
-  <description>AEM multi-module archetype.</description>
+  <name>AEM and React Multi-Module Archetype</name>
+  <description>AEM and React multi-module archetype.</description>
 
   <scm>
       <connection>scm:git:https://github.com/Adobe-Marketing-Cloud/aem-project-archetype.git</connection>

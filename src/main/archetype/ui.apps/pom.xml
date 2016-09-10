@@ -34,6 +34,10 @@
     <packaging>content-package</packaging>
     <name>${artifactName} - UI apps</name>
     <description>UI apps package for ${artifactName}</description>
+    
+    <properties>
+        <javascript.environment>production</javascript.environment>
+    </properties>
 
     <!-- <scm>
         <connection></connection>
@@ -106,6 +110,47 @@
                     </execution>
                 </executions>
             </plugin>
+            
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.4.0</version>
+                <executions>
+                    <execution>
+                        <id>npm install</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <skip>${skip-npm-install}</skip>
+                            <workingDirectory>${basedir}/src/main/ts</workingDirectory>
+                            <executable>npm</executable>
+                            <arguments>
+                                <argument>install</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>npm start</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <!-- TODO we need to define environment mode: product|development -->
+                        <configuration>
+                            <skip>${skip-npm-start}</skip>
+                            <workingDirectory>${basedir}/src/main/ts</workingDirectory>
+                            <executable>npm</executable>
+                            <arguments>
+                                <argument>run</argument>
+                                <argument>start</argument>
+                                <argument>--env=${javascript.environment}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
 
             <!-- ====================================================================== -->
             <!-- V A U L T   P A C K A G E   P L U G I N                                -->
@@ -125,6 +170,11 @@
                             <artifactId>${rootArtifactId}.core</artifactId>
                             <target>/apps/${appsFolderName}/install</target>
                         </embedded>
+                        <embedded>
+                            <groupId>com.sinnerschrader.aem.react</groupId>
+                            <artifactId>core</artifactId>
+                            <target>/apps/${appsFolderName}/install</target>
+                        </embedded>
                     </embeddeds>
                 </configuration>
             </plugin>
@@ -139,6 +189,12 @@
             <groupId>${groupId}</groupId>
             <artifactId>${rootArtifactId}.core</artifactId>
             <version>${version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.sinnerschrader.aem.react</groupId>
+            <artifactId>core</artifactId>
+            <version>0.3.0</version>
         </dependency>
 
         <dependency>

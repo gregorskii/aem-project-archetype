@@ -89,6 +89,27 @@
                         <include>**/file</include>
                     </includes>
                 </fileSet>
+                <fileSet filtered="true" packaged="false"
+                    encoding="UTF-8">
+                    <directory>src/main/ts</directory>
+                    <includes>
+                        <include>**/*.*</include>
+                    </includes>
+                    <excludes>
+                        <exclude>**/*.png</exclude>
+                        <exclude>**/image</exclude>
+                        <exclude>**/file</exclude>
+                    </excludes>
+                </fileSet>
+                <fileSet filtered="false" packaged="false"
+                    encoding="UTF-8">
+                    <directory>src/main/ts</directory>
+                    <includes>
+                        <include>**/*.png</include>
+                        <include>**/image</include>
+                        <include>**/file</include>
+                    </includes>
+                </fileSet>
                 <fileSet filtered="false" packaged="false"
                     encoding="UTF-8">
                     <directory>src/main/content/jcr_root</directory>
