@@ -9,7 +9,7 @@ import CityView from "./cityfinder/CityView";
 import {Panel} from "./vanilla/Panel";
 import {TextField} from "./vanilla/TextField";
 
-let registry: ComponentRegistry = new ComponentRegistry("${appsFolderName}/react");
+let registry: ComponentRegistry = new ComponentRegistry("${appsFolderName}/components/react");
 registry.register(Embedded);
 registry.register(Text);
 registry.register(ReactParsys);

@@ -109,5 +109,10 @@
             <groupId>junit-addons</groupId>
             <artifactId>junit-addons</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.sinnerschrader.aem.react</groupId>
+            <artifactId>core</artifactId>
+            <version>0.3.0</version>
+        </dependency>
     </dependencies>
 </project>
