@@ -3,4 +3,4 @@
     xmlns:jcr="http://www.jcp.org/jcr/1.0" jcr:primaryType="sling:OsgiConfig"
     pool.total.size="30" 
     scripts.reload="true"
-    scripts.paths="/etc/designs/__appsFolderName__/clientlib-site/reactserver.js/jcr:content" />
+    scripts.paths="/etc/designs/${appsFolderName}/clientlib-site/reactserver.js/jcr:content" />
