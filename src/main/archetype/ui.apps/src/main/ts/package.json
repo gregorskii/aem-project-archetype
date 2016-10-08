@@ -4,7 +4,7 @@
   "version": "0.3.0",
   "main": "index.js",
   "config": {
-	    "crx": "http://admin:admin@localhost:4602/crx/repository/crx.default"
+	    "crx": "http://admin:admin@localhost:4502/crx/repository/crx.default"
   },
   "scripts": {
     "tsd": "tsd",

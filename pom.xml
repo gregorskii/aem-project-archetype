@@ -26,9 +26,9 @@
   <description>AEM and React multi-module archetype.</description>
 
   <scm>
-      <connection>scm:git:https://github.com/Adobe-Marketing-Cloud/aem-project-archetype.git</connection>
-      <developerConnection>scm:git:https://github.com/Adobe-Marketing-Cloud/aem-project-archetype.git</developerConnection>
-      <url>https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/tree/master/</url>
+      <connection>scm:git:https://github.com/sinnerschrader/aem-project-archetype.git</connection>
+      <developerConnection>scm:git:https://github.com/sinnerschrader/aem-project-archetype.git</developerConnection>
+      <url>https://github.com/Adobe-Marketing-Cloud/sinnerschrader/tree/master/</url>
       <tag>HEAD</tag>
   </scm>
 
@@ -106,15 +106,14 @@
 
   <distributionManagement>
     <repository>
-      <id>${releaseRepository-Id}</id>
-      <name>${releaseRepository-Name}</name>
-      <url>${releaseRepository-URL}</url>
+      <id>ossrh</id>
+      <name>sonatype-nexus-staging</name>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
     </repository>
     <snapshotRepository>
-      <id>${snapshotRepository-Id}</id>
-      <name>${snapshotRepository-Name}</name>
-      <url>${snapshotRepository-URL}</url>
-      <uniqueVersion>false</uniqueVersion>
+      <id>ossrh</id>
+      <name>Sonatype Nexus Snapshots</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
   
