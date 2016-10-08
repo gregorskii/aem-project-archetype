@@ -18,9 +18,9 @@ mode _production_ the javscript will
 - environment : --env=production | development 
 
 
-To set the name/ip of your local server to local.website:
+To set the name/ip of your local AEM instance:
 
-npm config set demo:aemhost localhost
+npm config set demo:crx http://admin:admin@localhost:4502/crx/repository/crx.default
 
 
 ### watch
