@@ -2,6 +2,8 @@
 .classpath
 .settings
 /target
+release.properties
+*.releaseBackup
 
 ### IntelliJ ###
 .idea/
